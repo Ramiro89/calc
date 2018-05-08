@@ -1,8 +1,13 @@
 package prueba.link;
+import java.util.Scanner;
 
 public class Principal {
 
     public static void main(String[] args) {
+        Scanner teclado=new Scanner(System.in);
+        int opcion;
+        int id;
+        String color;
 
       System.out.println("*************************");
       System.out.println("         MENU            ");
@@ -12,6 +17,21 @@ public class Principal {
       System.out.println("");
       System.out.println("1. Crear Figura Geometrica");
       System.out.println("2. Listar figuras geometricas");
+      opcion=teclado.nextInt();
+
+      if (opcion==1) {
+          System.out.println("1-Introdusca el ID:");
+          id = teclado.nextInt();
+          System.out.println("usted creo una figura geometrica con id: " + id);
+      }else
+              if (opcion==2)
+              {
+                  System.out.println("Este es el listado de figuras");
+                  System.out.println("Cuadrado, Rectangulo, Triangulo");}
+                  else{
+                    System.out.println("Solo puede insertar 2 numeros: 1 ó 2");
+              }
+      }
 
 
 
@@ -59,5 +79,3 @@ public class Principal {
         System.out.println("Perimetro: "+figura.getPerimetro());*/
 
     }
-
-}
